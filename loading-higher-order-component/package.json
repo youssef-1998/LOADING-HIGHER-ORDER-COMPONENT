@@ -2,7 +2,7 @@
   "name": "react-movie-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://youssef-1998.github.io/REACT-MOVIE-APP/",
+  "homepage": "https://youssef-1998.github.io/LOADING-HIGHER-ORDER-COMPONENT/",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.11.0",

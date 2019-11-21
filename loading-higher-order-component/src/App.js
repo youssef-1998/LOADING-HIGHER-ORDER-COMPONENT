@@ -55,6 +55,12 @@ class App extends React.Component {
       keyword: '',
       loding: true,
     }
+    setTimeout(() => {
+      this.setState({
+        loding: false
+      })
+
+    }, 5000);
   }
 
   rateMovie = x => {
@@ -62,10 +68,10 @@ class App extends React.Component {
   }
 
   searchMovie = y => {
-    this.setState({ 
+    this.setState({
       keyword: y
-     })
-    
+    })
+
   }
 
   add = () => {
@@ -79,11 +85,6 @@ class App extends React.Component {
     })
   }
 
-  // setTimeout(() => {
-    
-  // }, timeout);
-    
-
   render() {
     const { } = this.state;
     return (
@@ -93,7 +94,7 @@ class App extends React.Component {
           <SearchBar rummage={titre => this.searchMovie(titre)} />
           <StarFilter rating={this.state.newRating} rateIt={number => this.rateMovie(number)} />
         </div>
-        <MoviesList lod={this.state.loding} x={this.state.list.filter(el => el.rating >= this.state.newRating && el.title.toUpperCase().includes(this.state.keyword.toUpperCase().trim())) } />
+        <MoviesList lod={this.state.loding} x={this.state.list.filter(el => el.rating >= this.state.newRating && el.title.toUpperCase().includes(this.state.keyword.toUpperCase().trim()))} />
         <button className="btn-plus" onClick={this.add}>+ add movie</button>
       </div>
 
